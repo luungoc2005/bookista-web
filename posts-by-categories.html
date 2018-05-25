@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Posts by category"
-description: "A Clean Blog Theme by Start Bootstrap"
+description: "Official Blog of Bookista Project"
 header-img: "img/post-bg-01.jpg"
 ---
 
@@ -34,6 +34,7 @@ header-img: "img/post-bg-01.jpg"
                 <!-- problem of for cycle can't use images <img src="/{{ post.header-img | prepend: site.baseurl }}" class="img-responsive" alt="{{ post.title }}"> -->
                 <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
                 <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
+                <p class="text-muted">{{ post.content | truncatewords:50 | strip_html }}</p>
               </li>
             {% endfor %}
           {% endfor %}
